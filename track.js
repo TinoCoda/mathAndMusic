@@ -59,7 +59,7 @@ class Track {
             break;
          case trackStyle.HYPERBOLE:
             x = this.center.x + this.radius*0.9/Math.cos(offset);
-            y = this.center.y - Math.abs(Math.tan(offset)) * 0.7*this.radius;
+            y = this.center.y - Math.abs(Math.tan(offset)/Math.cos(1.4*offset)) * 0.7*this.radius;
             round = Math.floor(offset / this.period);
             progress = (offset % this.period) / this.period;
             break;
